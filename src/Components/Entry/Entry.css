@@ -1,0 +1,11 @@
+.Entry {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Entry .EntryTitle {
+  color: #3fc0e8;
+}/*# sourceMappingURL=Entry.css.map */
