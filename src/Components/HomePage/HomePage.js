@@ -5,6 +5,7 @@ import Portfolio from './HomePageComponents/Portfolio/Portfolio';
 import Twitter from './HomePageComponents/TwitterFeed/Twitter';
 import HomePageMiddleSection from './HomePageComponents/HomePageMiddleSection/HomePageMiddleSection.js';
 import EditPortfolio from './HomePageComponents/Portfolio/Portfolio.js';
+import InfoHeader from './HomePageComponents/InfoHeader/InfoHeader';
 
 function HomePage() {
 	AOS.init();
@@ -18,7 +19,7 @@ function HomePage() {
 
 	return (
 		<div className="HomePage">
-			{/* <h1 className="HomePageTitle">HomePage</h1> */}
+			<InfoHeader />
 			<div className="PortfolioContainer">
 				<h1 className="PortfolioHeader">My Portfolio</h1>
 				<button

@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: center;
 }
+.Entry img {
+  height: 150px;
+  width: auto;
+}
 .Entry .EntryTitle {
   color: #3fc0e8;
 }/*# sourceMappingURL=Entry.css.map */

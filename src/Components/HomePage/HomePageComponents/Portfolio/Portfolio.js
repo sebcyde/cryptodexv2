@@ -23,20 +23,17 @@ function Portfolio() {
 		axios
 			.get('https://api.coingecko.com/api/v3/coins/list')
 			.then((response) => {
-				console.log(response.data);
 				response.data.map((Coin) => {
 					if (Port.length < 7 && Coin.id.length < 7) {
 						Port.push(Coin);
-						console.log('Pushed Bitcoin');
-						console.log(Port);
 					}
 				});
 			})
 			.then(() => {
+				console.log(Port);
 				setPortfolioList(
 					Port.map((PortfolioItems, index) => {
 						let Name = capitalizeFirstLetter(PortfolioItems.id);
-						console.log(Name);
 						return (
 							<div key={index} className="ReturnedPortListNames">
 								<h2 className="AssetName">{Name}</h2>
