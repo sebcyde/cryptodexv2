@@ -1,0 +1,32 @@
+.ReturnedPortListNames {
+  width: 96%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid aqua;
+}
+.ReturnedPortListNames h2 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: medium;
+}
+.ReturnedPortListNames img {
+  margin: 0px;
+  height: 30px;
+  width: auto;
+}
+
+.ReturnedPortListNames:hover {
+  color: coral;
+}
+
+.ReturnedPortListNames:nth-last-of-type(1) {
+  border-bottom: none;
+}/*# sourceMappingURL=Portfolio.css.map */

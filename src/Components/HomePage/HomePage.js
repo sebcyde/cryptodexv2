@@ -8,8 +8,11 @@ function HomePage() {
 
 	return (
 		<div className="HomePage">
-			<h1>HomePage</h1>
-			<Portfolio />
+			<h1 className="HomePageTitle">HomePage</h1>
+			<div className="PortfolioContainer">
+				<h1 className="PortfolioHeader">My Portfolio</h1>
+				<Portfolio />
+			</div>
 		</div>
 	);
 }

@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import './Portfolio.css';
+import LoadingSymbol from '../../../LoadingSymbol/LoadingSymbol.js';
 import axios from 'axios';
 
 function Portfolio() {
-	const [PortfolioList, setPortfolioList] = useState(<h1>Empty Portfolio</h1>);
+	const [PortfolioList, setPortfolioList] = useState(LoadingSymbol);
+	const [Prices, setPrices] = useState(LoadingSymbol);
 
 	const Port = [];
+	const PortAPIQuery = '';
 
 	const Bitcoin = {
 		id: 'btc',
@@ -19,6 +23,10 @@ function Portfolio() {
 	};
 
 	Port.push(Bitcoin, Ethereum);
+
+	function capitalizeFirstLetter(string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 
 	useEffect(() => {
 		axios
@@ -36,13 +44,20 @@ function Portfolio() {
 			.then(() => {
 				setPortfolioList(
 					Port.map((PortfolioItems, index) => {
-						console.log(PortfolioItems.id);
+						let Name = capitalizeFirstLetter(PortfolioItems.id);
+						console.log(Name);
 						return (
-							<div>
-								<h2 key={index}>{PortfolioItems.id}</h2>
+							<div key={index} className="ReturnedPortListNames">
+								<h2 className="AssetName">{Name}</h2>
+								<h2 className="AssetPrice">{Prices}</h2>
 							</div>
 						);
 					})
+				);
+			})
+			.then(() => {
+				axios.get(
+					'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_24hr_change=true'
 				);
 			});
 	}, []);

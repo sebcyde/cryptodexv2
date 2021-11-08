@@ -1,5 +1,35 @@
 .HomePage {
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 200vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   color: #3fc0e8;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+.HomePage .homePageTitle {
+  width: 100%;
+  text-align: center;
+}
+.HomePage .PortfolioContainer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  width: 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5em;
+  margin-left: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  border: 1px solid aqua;
+  box-shadow: 4px 5px 5px rgba(0, 255, 255, 0.563);
+}
+.HomePage .PortfolioContainer .PortfolioHeader {
+  text-shadow: 5px 5px 8px rgba(0, 255, 255, 0.563);
 }/*# sourceMappingURL=HomePage.css.map */
