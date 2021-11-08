@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Portfolio.css';
 import LoadingSymbol from '../../../LoadingSymbol/LoadingSymbol.js';
 import axios from 'axios';
+import EditPortButton from '../../HomePage.js';
 
 function Portfolio() {
 	const [PortfolioList, setPortfolioList] = useState(LoadingSymbol);
@@ -10,23 +11,13 @@ function Portfolio() {
 	const Port = [];
 	const PortAPIQuery = '';
 
-	const Bitcoin = {
-		id: 'btc',
-		price: 100,
-		volume: 20000,
-	};
-
-	const Ethereum = {
-		id: 'eth',
-		price: 3000,
-		volume: 15000,
-	};
-
-	Port.push(Bitcoin, Ethereum);
-
 	function capitalizeFirstLetter(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
+
+	// EditPort.onClick(() => {
+	// 	console.log('editing Portfolio');
+	// });
 
 	useEffect(() => {
 		axios
@@ -34,7 +25,7 @@ function Portfolio() {
 			.then((response) => {
 				console.log(response.data);
 				response.data.map((Coin) => {
-					if (Coin.id === 'bitcoin') {
+					if (Port.length < 7 && Coin.id.length < 7) {
 						Port.push(Coin);
 						console.log('Pushed Bitcoin');
 						console.log(Port);

@@ -34,6 +34,17 @@
 .HomePage .PortfolioContainer .PortfolioHeader {
   text-shadow: 5px 5px 8px rgba(0, 255, 255, 0.563);
 }
+.HomePage .PortfolioContainer .EditPortfolio {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  border: 1px solid aqua;
+  border-radius: 10px;
+  color: aqua;
+}
 .HomePage .TwitterListContainer {
   width: 40%;
   margin-top: 3em;
