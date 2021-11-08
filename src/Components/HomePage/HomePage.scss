@@ -21,7 +21,6 @@
 		width: 20%;
 		height: fit-content;
 		padding: 0.5em;
-		margin-left: 3em;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -44,8 +43,17 @@
 		}
 	}
 
+	.HomePageMiddleSection {
+		border: 1px solid green;
+		margin-top: 3em;
+		border-radius: 15px;
+		width: 50%;
+		height: fit-content;
+		box-shadow: 4px 5px 5px green;
+	}
+
 	.TwitterListContainer {
-		width: 40%;
+		width: 20%;
 		margin-top: 3em;
 	}
 }

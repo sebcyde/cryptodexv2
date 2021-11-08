@@ -3,6 +3,7 @@ import AOS from 'aos';
 import './HomePage.css';
 import Portfolio from './HomePageComponents/Portfolio/Portfolio';
 import Twitter from './HomePageComponents/TwitterFeed/Twitter';
+import HomePageMiddleSection from './HomePageComponents/HomePageMiddleSection/HomePageMiddleSection.js';
 import EditPortfolio from './HomePageComponents/Portfolio/Portfolio.js';
 
 function HomePage() {
@@ -30,9 +31,9 @@ function HomePage() {
 				<Portfolio />
 			</div>
 
-			{/* <div className="MainContainer">
-				<Main />
-			</div> */}
+			<div className="HomePageMiddleSection">
+				<HomePageMiddleSection />
+			</div>
 
 			<div className="TwitterListContainer">
 				<Twitter />
