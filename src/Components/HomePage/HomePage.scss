@@ -2,14 +2,13 @@
 
 .HomePage {
 	box-sizing: border-box;
-	width: 100vw;
-	height: 200vh;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	width: 100%;
+	height: fit-content;
 	color: $AccentFont;
 	border: 1px solid red;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: space-evenly;
 
 	.homePageTitle {
 		width: 100%;
@@ -18,7 +17,7 @@
 
 	.PortfolioContainer {
 		position: sticky;
-		top: 0px;
+		top: 3em;
 		width: 20%;
 		height: fit-content;
 		padding: 0.5em;
@@ -33,5 +32,10 @@
 		.PortfolioHeader {
 			text-shadow: 5px 5px 8px rgba(0, 255, 255, 0.563);
 		}
+	}
+
+	.TwitterListContainer {
+		width: 40%;
+		margin-top: 3em;
 	}
 }

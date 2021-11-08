@@ -1,13 +1,14 @@
 .HomePage {
   box-sizing: border-box;
-  width: 100vw;
-  height: 200vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   color: #3fc0e8;
   border: 1px solid red;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .HomePage .homePageTitle {
   width: 100%;
@@ -16,7 +17,7 @@
 .HomePage .PortfolioContainer {
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
+  top: 3em;
   width: 20%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -32,4 +33,8 @@
 }
 .HomePage .PortfolioContainer .PortfolioHeader {
   text-shadow: 5px 5px 8px rgba(0, 255, 255, 0.563);
+}
+.HomePage .TwitterListContainer {
+  width: 40%;
+  margin-top: 3em;
 }/*# sourceMappingURL=HomePage.css.map */
