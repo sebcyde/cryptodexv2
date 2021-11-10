@@ -15,10 +15,6 @@ function Portfolio() {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
-	// EditPort.onClick(() => {
-	// 	console.log('editing Portfolio');
-	// });
-
 	useEffect(() => {
 		axios
 			.get('https://api.coingecko.com/api/v3/coins/list')
@@ -54,3 +50,7 @@ function Portfolio() {
 }
 
 export default Portfolio;
+
+// EditPortButton.onClick(() => {
+// 	console.log('editing Portfolio');
+// });
