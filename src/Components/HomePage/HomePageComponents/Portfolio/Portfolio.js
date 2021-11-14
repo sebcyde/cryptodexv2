@@ -5,7 +5,6 @@ import axios from 'axios';
 import EditPortButton from '../../HomePage.js';
 
 function Portfolio() {
-	let x = 0;
 	const [PortfolioList, setPortfolioList] = useState(LoadingSymbol);
 	const [Price, setPrice] = useState(LoadingSymbol);
 	// const [GetPrices, setGetPrices] = useState(Prices);
@@ -29,36 +28,72 @@ function Portfolio() {
 			})
 			.then(() => {
 				console.log(Port);
-				setInterval(() => {
+
+				setPortfolioList(
+					Port.map((PortfolioItems, index) => {
+						console.log(PortfolioItems);
+						axios
+							.get(
+								`https://api.coingecko.com/api/v3/simple/price?ids=${PortfolioItems.id}&vs_currencies=usd&include_24hr_change=true`
+							)
+							.then((response) => {
+								console.log(response.data);
+								PortAPIQuery.push(response.data);
+							});
+						let Name = capitalizeFirstLetter(PortfolioItems.id);
+
+						console.log(index);
+						console.log(PortAPIQuery);
+						return (
+							<div key={index} className="ReturnedPortListNames">
+								<LoadingSymbol />
+								<h2 className="AssetName">{Name}</h2>
+								<span>
+									<p className="AssetPrice">${index}</p>
+									<p className="AssetVolume">{index} Vol.</p>
+								</span>
+							</div>
+						);
+					})
+				);
+			});
+		setInterval(() => {
+			axios
+				.get('https://api.coingecko.com/api/v3/coins/list')
+				.then((response) => {
+					response.data.map((Coin) => {
+						if (Port.length < 7 && Coin.id.length < 7) {
+							Port.push(Coin);
+						}
+					});
+				})
+				.then(() => {
 					setPortfolioList(
 						Port.map((PortfolioItems, index) => {
-							console.log(PortfolioItems);
 							axios
 								.get(
 									`https://api.coingecko.com/api/v3/simple/price?ids=${PortfolioItems.id}&vs_currencies=usd&include_24hr_change=true`
 								)
 								.then((response) => {
-									console.log(response.data);
 									PortAPIQuery.push(response.data);
 								});
 							let Name = capitalizeFirstLetter(PortfolioItems.id);
 
-							console.log(index);
-							console.log(PortAPIQuery);
 							return (
 								<div key={index} className="ReturnedPortListNames">
 									<LoadingSymbol />
 									<h2 className="AssetName">{Name}</h2>
 									<span>
-										<p className="AssetPrice">{index}</p>
-										<p className="AssetVolume">{index}</p>
+										<p className="AssetPrice">${index}</p>
+										<p className="AssetVolume">{index} Vol.</p>
 									</span>
 								</div>
 							);
 						})
 					);
-				}, 6000);
-			});
+				});
+			console.log('Portfolio Updated');
+		}, 60000);
 	}, []);
 
 	return <div>{PortfolioList}</div>;

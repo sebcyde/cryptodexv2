@@ -31,6 +31,7 @@
 }
 .HomePage .PortfolioContainer .PortfolioHeader {
   text-shadow: 5px 5px 8px rgba(0, 255, 255, 0.563);
+  margin-bottom: 0;
 }
 .HomePage .PortfolioContainer .UpdateEdit {
   display: flex;
@@ -45,6 +46,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin: 0;
 }
 .HomePage .PortfolioContainer .EditPortfolio {
   width: -webkit-fit-content;
