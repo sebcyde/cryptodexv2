@@ -40,6 +40,13 @@
 			justify-content: space-evenly;
 			align-items: center;
 			height: fit-content;
+
+			i {
+				cursor: pointer;
+			}
+			i:hover {
+				color: tomato;
+			}
 		}
 
 		.LastUpdated {

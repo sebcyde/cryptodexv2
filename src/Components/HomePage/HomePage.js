@@ -9,13 +9,18 @@ import InfoHeader from './HomePageComponents/InfoHeader/InfoHeader';
 import PortfolioList from './HomePageComponents/Portfolio/Portfolio.js';
 
 function HomePage() {
+	AOS.init();
 	let d = new Date(); // for now
 	const [PortUpdateTime, setPortUpdateTime] = useState(
 		`${d.getHours()}:${d.getMinutes()}`
 	);
-	const EditPortButton = useRef();
 
-	AOS.init();
+	const [MiddleHome, setMiddleHome] = useState(<HomePageMiddleSection />);
+
+	const EditPortfolio = () => {
+		setMiddleHome();
+	};
+	const EditPortButton = useRef();
 
 	useEffect(() => {
 		// onclick = { EditPortfolio };
@@ -49,9 +54,7 @@ function HomePage() {
 				<Portfolio />
 			</div>
 
-			<div className="HomePageMiddleSection">
-				<HomePageMiddleSection />
-			</div>
+			<div className="HomePageMiddleSection">{MiddleHome}</div>
 
 			<div className="TwitterListContainer">
 				<Twitter />

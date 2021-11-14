@@ -1,11 +1,12 @@
 #scroll-container {
+  z-index: 1;
   border: 3px solid black;
   border-radius: 5px;
   overflow: hidden;
   position: absolute;
-  top: 0px;
-  width: 96%;
-  border-bottom: 1px solid plum;
+  bottom: 0px;
+  width: 100vw;
+  border-top: 1px solid plum;
   margin-left: auto;
   margin-right: auto;
   background-color: black;
@@ -19,7 +20,7 @@
   /* animation properties */
   transform: translateX(100%);
   -webkit-animation: my-animation 15s linear infinite;
-  animation: my-animation 15s linear infinite;
+  animation: my-animation 20s linear infinite;
 }
 
 /* for Firefox */

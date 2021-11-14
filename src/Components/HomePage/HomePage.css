@@ -42,6 +42,12 @@
   height: -moz-fit-content;
   height: fit-content;
 }
+.HomePage .PortfolioContainer .UpdateEdit i {
+  cursor: pointer;
+}
+.HomePage .PortfolioContainer .UpdateEdit i:hover {
+  color: tomato;
+}
 .HomePage .PortfolioContainer .LastUpdated {
   width: -webkit-fit-content;
   width: -moz-fit-content;

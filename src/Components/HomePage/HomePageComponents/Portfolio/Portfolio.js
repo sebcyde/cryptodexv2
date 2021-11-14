@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Portfolio.css';
 import LoadingSymbol from '../../../LoadingSymbol/LoadingSymbol.js';
 import axios from 'axios';
-import EditPortButton from '../../HomePage.js';
+
 
 function Portfolio() {
 	const [PortfolioList, setPortfolioList] = useState(LoadingSymbol);
@@ -46,8 +46,11 @@ function Portfolio() {
 						console.log(PortAPIQuery);
 						return (
 							<div key={index} className="ReturnedPortListNames">
-								<LoadingSymbol />
-								<h2 className="AssetName">{Name}</h2>
+								<span>
+									<LoadingSymbol />
+									<h2 className="AssetName">{Name}</h2>
+								</span>
+
 								<span>
 									<p className="AssetPrice">${index}</p>
 									<p className="AssetVolume">{index} Vol.</p>
@@ -81,8 +84,11 @@ function Portfolio() {
 
 							return (
 								<div key={index} className="ReturnedPortListNames">
-									<LoadingSymbol />
-									<h2 className="AssetName">{Name}</h2>
+									<span>
+										<LoadingSymbol />
+										<h2 className="AssetName">{Name}</h2>
+									</span>
+
 									<span>
 										<p className="AssetPrice">${index}</p>
 										<p className="AssetVolume">{index} Vol.</p>
@@ -93,7 +99,7 @@ function Portfolio() {
 					);
 				});
 			console.log('Portfolio Updated');
-		}, 60000);
+		}, 62000);
 	}, []);
 
 	return <div>{PortfolioList}</div>;
