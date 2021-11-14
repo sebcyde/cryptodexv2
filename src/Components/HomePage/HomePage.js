@@ -3,6 +3,7 @@ import AOS from 'aos';
 import './HomePage.css';
 import Portfolio from './HomePageComponents/Portfolio/Portfolio';
 import Twitter from './HomePageComponents/TwitterFeed/Twitter';
+import Search from './HomePageComponents/Search/Search';
 import HomePageMiddleSection from './HomePageComponents/HomePageMiddleSection/HomePageMiddleSection.js';
 import EditPortfolio from './HomePageComponents/Portfolio/Portfolio.js';
 import InfoHeader from './HomePageComponents/InfoHeader/InfoHeader';
@@ -15,11 +16,12 @@ function HomePage() {
 		`${d.getHours()}:${d.getMinutes()}`
 	);
 
-	const [MiddleHome, setMiddleHome] = useState(<HomePageMiddleSection />);
+	const [MiddleHome, setMiddleHome] = useState(<Search />);
 
-	const EditPortfolio = () => {
-		setMiddleHome();
-	};
+	// const EditPortfolio = () => {
+	// 	setMiddleHome();
+	// };
+
 	const EditPortButton = useRef();
 
 	useEffect(() => {
@@ -43,7 +45,7 @@ function HomePage() {
 					<p className="LastUpdated">{`Last Updated ${PortUpdateTime}`}</p>
 
 					<i
-						class="material-icons"
+						classname="material-icons"
 						ref={EditPortButton}
 						onclick={EditPortfolio}
 					>

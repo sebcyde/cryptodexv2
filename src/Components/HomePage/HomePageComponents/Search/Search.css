@@ -1,0 +1,30 @@
+.ChartContainer {
+  height: 500px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Search {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1em;
+  min-height: 40vh;
+  color: #3ffc00;
+}
+.Search .TickerImageAndName {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.Search .TickerImageAndName .TickerName {
+  font-size: 2em;
+}
+.Search .TickerImageAndName .TickerImage {
+  height: 150px;
+}/*# sourceMappingURL=Search.css.map */

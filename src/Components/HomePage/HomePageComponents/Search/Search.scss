@@ -1,0 +1,33 @@
+@import '../../../../Variables.scss';
+
+.ChartContainer {
+	height: 500px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Search {
+	height: fit-content;
+	padding: 1em;
+	min-height: 40vh;
+	color: $GreenAccentFont;
+
+	.TickerImageAndName {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.TickerName {
+			font-size: 2em;
+		}
+
+		.TickerImage {
+			height: 150px;
+		}
+	}
+}
