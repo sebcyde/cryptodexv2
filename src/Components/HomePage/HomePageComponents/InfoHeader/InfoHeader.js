@@ -11,7 +11,6 @@ function InfoHeader() {
 		axios
 			.get('https://api.coingecko.com/api/v3/search/trending')
 			.then((response) => {
-				console.log(`Init Response: ${response.data}`);
 				response.data.coins.map((TrendingCoins) => {
 					axios
 						.get(
@@ -21,7 +20,6 @@ function InfoHeader() {
 							Trending.push(secondresponse.data);
 						});
 				});
-				console.log(`Trending: ${Trending}`);
 			});
 	}, []);
 

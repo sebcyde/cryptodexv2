@@ -5,11 +5,13 @@ import axios from 'axios';
 import EditPortButton from '../../HomePage.js';
 
 function Portfolio() {
+	let x = 0;
 	const [PortfolioList, setPortfolioList] = useState(LoadingSymbol);
-	const [Prices, setPrices] = useState(LoadingSymbol);
+	const [Price, setPrice] = useState(LoadingSymbol);
+	// const [GetPrices, setGetPrices] = useState(Prices);
 
 	const Port = [];
-	const PortAPIQuery = '';
+	const PortAPIQuery = [];
 
 	function capitalizeFirstLetter(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
@@ -27,22 +29,35 @@ function Portfolio() {
 			})
 			.then(() => {
 				console.log(Port);
-				setPortfolioList(
-					Port.map((PortfolioItems, index) => {
-						let Name = capitalizeFirstLetter(PortfolioItems.id);
-						return (
-							<div key={index} className="ReturnedPortListNames">
-								<h2 className="AssetName">{Name}</h2>
-								<h2 className="AssetPrice">{Prices}</h2>
-							</div>
-						);
-					})
-				);
-			})
-			.then(() => {
-				axios.get(
-					'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_24hr_change=true'
-				);
+				setInterval(() => {
+					setPortfolioList(
+						Port.map((PortfolioItems, index) => {
+							console.log(PortfolioItems);
+							axios
+								.get(
+									`https://api.coingecko.com/api/v3/simple/price?ids=${PortfolioItems.id}&vs_currencies=usd&include_24hr_change=true`
+								)
+								.then((response) => {
+									console.log(response.data);
+									PortAPIQuery.push(response.data);
+								});
+							let Name = capitalizeFirstLetter(PortfolioItems.id);
+
+							console.log(index);
+							console.log(PortAPIQuery);
+							return (
+								<div key={index} className="ReturnedPortListNames">
+									<LoadingSymbol />
+									<h2 className="AssetName">{Name}</h2>
+									<span>
+										<p className="AssetPrice">{index}</p>
+										<p className="AssetVolume">{index}</p>
+									</span>
+								</div>
+							);
+						})
+					);
+				}, 6000);
 			});
 	}, []);
 
