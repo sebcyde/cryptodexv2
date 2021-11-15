@@ -13,6 +13,29 @@
   min-height: 40vh;
   color: #3ffc00;
 }
+.Search .SearchForm {
+  margin-bottom: 1em;
+  color: #3ffc00;
+}
+.Search .SearchForm .SearchInput {
+  background-color: transparent;
+  margin-left: 1em;
+  border-radius: 5px;
+  border: 1px solid #3ffc00;
+  padding: 0.5em;
+  box-shadow: 2px 2px 1px #3ffc00;
+  color: #3ffc00;
+}
+.Search .SearchForm .SearchSubmitButton {
+  background-color: transparent;
+  border-radius: 5px;
+  margin-left: 0.5em;
+  color: #3ffc00;
+  padding: 0.5em;
+  border: 1px solid #3ffc00;
+  box-shadow: 2px 2px 1px #3ffc00;
+  cursor: pointer;
+}
 .Search .TickerImageAndName {
   width: 80%;
   margin-left: auto;

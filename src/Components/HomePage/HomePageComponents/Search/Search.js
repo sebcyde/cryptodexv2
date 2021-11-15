@@ -36,13 +36,39 @@ function Search() {
 				);
 			});
 
-		axios
-			.get(
-				`https://api.coingecko.com/api/v3/coins/${SearchTerm.current.value}/market_chart?vs_currency=usd&days=30`
-			)
-			.then((response) => {
-				console.log(response.data);
-			});
+		axios.get(
+			`https://api.coingecko.com/api/v3/coins/${SearchTerm.current.value}/market_chart?vs_currency=usd&days=30`
+		);
+		// .then((response) => {
+		// 	console.log(response.data);
+		// 	console.log(response.data.prices);
+
+		// 	const config = {
+		// 		type: 'line',
+		// 		// data: response.data.prices,
+		// 		series: [
+		// 			{
+		// 				points: [
+		// 					{ x: 'A', y: 50 },
+		// 					{ x: 'B', y: 30 },
+		// 					{ x: 'C', y: 50 },
+		// 				],
+		// 			},
+		// 		],
+		// 	};
+
+		// 	const divStyle = {
+		// 		maxWidth: '700px',
+		// 		height: '400px',
+		// 		margin: '0px auto',
+		// 	};
+
+		// 	setSearchChart(
+		// 		<div style={divStyle}>
+		// 			<JSCharting options={config} />
+		// 		</div>
+		// 	);
+		// });
 
 		SearchTerm.current.value = '';
 	};
@@ -63,11 +89,10 @@ function Search() {
 					className="SearchSubmitButton"
 				/>
 			</form>
+			{SearchReturn}
 			<div className="ChartContainer" id="chartDiv">
 				{SearchChart}
 			</div>
-
-			{SearchReturn}
 
 			<div className="SearchResponseContainer">
 				<div className="TickerNews">

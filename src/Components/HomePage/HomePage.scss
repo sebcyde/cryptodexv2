@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 	width: 100%;
 	height: 100vh;
-	color: $AccentFont;
+	color: $GreenAccentFont;
 	border: 1px solid red;
 	display: flex;
 	flex-direction: row;
@@ -26,11 +26,12 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 		border-radius: 15px;
-		border: 1px solid aqua;
-		box-shadow: 4px 5px 5px rgba(0, 255, 255, 0.563);
+		border: 1px solid green;
+		box-shadow: 2px 2px 3px green;
+		background-color: $GreenBackgroundColor;
 
 		.PortfolioHeader {
-			text-shadow: 5px 5px 8px rgba(0, 255, 255, 0.563);
+			text-shadow: 1px 1px 3px green;
 			margin-bottom: 0;
 		}
 
@@ -59,9 +60,9 @@
 			margin-left: auto;
 			margin-right: auto;
 			background-color: transparent;
-			border: 1px solid aqua;
+			border: 1px solid $GreenAccentFont;
 			border-radius: 10px;
-			color: $AccentFont;
+			color: $GreenAccentFont;
 		}
 		.EditPortfolio:hover {
 			color: tomato;
@@ -74,8 +75,9 @@
 		border-radius: 15px;
 		width: 50%;
 		height: fit-content;
-		box-shadow: 4px 5px 5px green;
+		box-shadow: 2px 2px 3px green;
 		overflow-y: auto;
+		background-color: $GreenBackgroundColor;
 		p {
 			width: 90%;
 			margin-left: auto;
