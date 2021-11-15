@@ -8,6 +8,7 @@ import HomePageMiddleSection from './HomePageComponents/HomePageMiddleSection/Ho
 import EditPortfolio from './HomePageComponents/Portfolio/Portfolio.js';
 import InfoHeader from './HomePageComponents/InfoHeader/InfoHeader';
 import PortfolioList from './HomePageComponents/Portfolio/Portfolio.js';
+import Nav from './HomePageComponents/Nav/Nav';
 
 function HomePage() {
 	AOS.init();
@@ -38,6 +39,7 @@ function HomePage() {
 
 	return (
 		<div className="HomePage">
+			<Nav />
 			<InfoHeader />
 			<div className="PortfolioContainer">
 				<h1 className="PortfolioHeader">My Portfolio</h1>

@@ -1,0 +1,27 @@
+.Nav {
+  width: 100% !important;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #3ffc00;
+  border: none;
+  position: fixed;
+  top: 0px;
+  padding-bottom: 0.2em;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.Nav .NavData {
+  height: 100%;
+  border: thick double green;
+  border-right: none;
+  border-top: none;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  background-color: black;
+  text-align: center;
+}/*# sourceMappingURL=Nav.css.map */

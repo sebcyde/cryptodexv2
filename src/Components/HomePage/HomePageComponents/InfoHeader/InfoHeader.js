@@ -51,7 +51,7 @@ function InfoHeader() {
 						<span className="TrendingContainer" key={Coins}>
 							<p className="Symbol">{Coins.symbol}:</p>
 							<p className>{Coins.market_data.current_price.usd}</p>
-							<p>
+							<p className="PriceChange">
 								{Coins.market_data.price_change_percentage_24h_in_currency.usd}%
 							</p>
 						</span>

@@ -3,13 +3,13 @@
   width: 100%;
   height: 100vh;
   color: #3ffc00;
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   overflow-y: auto;
-  background-image: url(https://wallpapersprinted.com/download/2/circuit_board_art-wallpaper-2560x1600.jpg);
+  background-image: url(https://images.hdqwalls.com/download/dots-dark-4k-vi-1280x1024.jpg);
   background-size: cover;
+  background-position: center;
 }
 .HomePage .homePageTitle {
   width: 100%;
@@ -18,7 +18,7 @@
 .HomePage .PortfolioContainer {
   position: -webkit-sticky;
   position: sticky;
-  top: 1em;
+  top: 2.2em;
   width: 20%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -73,7 +73,7 @@
 }
 .HomePage .HomePageMiddleSection {
   border: thick double green;
-  margin-top: 1em;
+  margin-top: 2.2em;
   border-radius: 15px;
   width: 50%;
   height: -webkit-fit-content;
@@ -93,5 +93,5 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-top: 1em;
+  margin-top: 3em;
 }/*# sourceMappingURL=HomePage.css.map */
