@@ -4,6 +4,7 @@ import axios from 'axios';
 
 function InfoHeader() {
 	const Trending = [];
+	const TrendingCleanData = [];
 	const [FinalHeader, setFinalHeader] = useState(<span></span>);
 	const Test = [];
 
@@ -17,38 +18,45 @@ function InfoHeader() {
 							`https://api.coingecko.com/api/v3/coins/${TrendingCoins.item.id}`
 						)
 						.then((secondresponse) => {
+							console.log(secondresponse.data);
 							Trending.push(secondresponse.data);
+							// Trending.map((Coins) => {
+							// 	TrendingCleanData.push(
+							// 		<span className="TrendingContainer" key={Coins}>
+							// 			<p className="Symbol">{Coins.symbol}:</p>
+							// 			<p className>{Coins.market_data.current_price.usd}</p>
+							// 			<p>
+							// 				{
+							// 					Coins.market_data
+							// 						.price_change_percentage_24h_in_currency.usd
+							// 				}
+							// 				%
+							// 			</p>
+							// 		</span>
+							// 	);
+							// 	return TrendingCleanData;
+							// });
 						});
 				});
+				console.log(Trending);
+				console.log(TrendingCleanData);
 			});
-	}, []);
-
-	useEffect(() => {
-		setFinalHeader(
-			Trending.map((Coins) => {
-				<span className="TrendingContainer">
-					<h2>`${Coins.symbol}:`</h2>
-					<h3>`$${Coins.market_data.current_price.usd}`</h3>
-					<h3>
-						`$
-						{Coins.market_data.price_change_percentage_24h_in_currency.usd}
-						%`
-					</h3>
-				</span>;
-				return Test;
-			})
-		);
-
-		console.log(FinalHeader);
-		console.log(Test);
 	}, []);
 
 	return (
 		<div id="scroll-container">
 			<div id="scroll-text">
-				It has survived not only five centuries, but also the leap into
-				electronic typesetting, remaining essentially unchanged. It was
-				popularised
+				{Trending.map((Coins) => {
+					return (
+						<span className="TrendingContainer" key={Coins}>
+							<p className="Symbol">{Coins.symbol}:</p>
+							<p className>{Coins.market_data.current_price.usd}</p>
+							<p>
+								{Coins.market_data.price_change_percentage_24h_in_currency.usd}%
+							</p>
+						</span>
+					);
+				})}
 			</div>
 		</div>
 	);

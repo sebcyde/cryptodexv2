@@ -8,6 +8,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   overflow-y: auto;
+  background-image: url(https://wallpapersprinted.com/download/2/circuit_board_art-wallpaper-2560x1600.jpg);
+  background-size: cover;
 }
 .HomePage .homePageTitle {
   width: 100%;
@@ -16,7 +18,7 @@
 .HomePage .PortfolioContainer {
   position: -webkit-sticky;
   position: sticky;
-  top: 3em;
+  top: 1em;
   width: 20%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -26,9 +28,9 @@
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 15px;
-  border: 1px solid green;
+  border: thick double green;
   box-shadow: 2px 2px 3px green;
-  background-color: rgba(0, 223, 0, 0.234);
+  background-color: rgba(0, 95, 0, 0.364);
 }
 .HomePage .PortfolioContainer .PortfolioHeader {
   text-shadow: 1px 1px 3px green;
@@ -62,7 +64,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
-  border: 1px solid #3ffc00;
+  border: thick double green;
   border-radius: 10px;
   color: #3ffc00;
 }
@@ -70,8 +72,8 @@
   color: tomato;
 }
 .HomePage .HomePageMiddleSection {
-  border: 1px solid green;
-  margin-top: 3em;
+  border: thick double green;
+  margin-top: 1em;
   border-radius: 15px;
   width: 50%;
   height: -webkit-fit-content;
@@ -79,7 +81,7 @@
   height: fit-content;
   box-shadow: 2px 2px 3px green;
   overflow-y: auto;
-  background-color: rgba(0, 223, 0, 0.234);
+  background-color: rgba(0, 95, 0, 0.364);
 }
 .HomePage .HomePageMiddleSection p {
   width: 90%;
@@ -91,5 +93,5 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-top: 3em;
+  margin-top: 1em;
 }/*# sourceMappingURL=HomePage.css.map */
