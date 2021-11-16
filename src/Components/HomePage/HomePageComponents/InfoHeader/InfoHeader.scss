@@ -1,12 +1,13 @@
+@import '../../../../Variables.scss';
+
 #scroll-container {
 	z-index: 1;
-	border: 3px solid black;
 	border-radius: 5px;
 	overflow: hidden;
 	position: absolute;
 	bottom: 0px;
 	width: 100vw;
-	border-top: 1px solid plum;
+	border-top: 2px solid green;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: black;
