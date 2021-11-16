@@ -14,7 +14,11 @@ function HomePage() {
 	AOS.init();
 	let d = new Date(); // for now
 	const [PortUpdateTime, setPortUpdateTime] = useState(
-		`${d.getHours()}:${d.getMinutes()}`
+		(d.getHours() < 10 ? '0' : '') +
+			d.getHours() +
+			':' +
+			(d.getMinutes() < 10 ? '0' : '') +
+			d.getMinutes()
 	);
 
 	const [MiddleHome, setMiddleHome] = useState(<Search />);
@@ -33,7 +37,13 @@ function HomePage() {
 
 	useEffect(() => {
 		console.log(d.getHours());
-		setPortUpdateTime(`${d.getHours()}:${d.getMinutes()}`);
+		setPortUpdateTime(
+			(d.getHours() < 10 ? '0' : '') +
+				d.getHours() +
+				':' +
+				(d.getMinutes() < 10 ? '0' : '') +
+				d.getMinutes()
+		);
 		console.log('Portfolio List Updated');
 	}, [PortfolioList]);
 

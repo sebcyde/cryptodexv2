@@ -26,11 +26,15 @@ function Nav() {
 			this.getSeconds()
 		);
 	};
-	var datetime = new Date().today() + '  ' + new Date().timeNow();
+	let newDate = new Date().today();
+	let newTime = new Date().timeNow();
 
 	return (
 		<div className="Nav">
-			<span className="NavData">{datetime}</span>
+			<span className="NavData">
+				<span>{newDate}</span>
+				<span>{newTime}</span>
+			</span>
 		</div>
 	);
 }
