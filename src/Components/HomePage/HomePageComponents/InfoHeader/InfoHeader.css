@@ -17,6 +17,7 @@
 }
 
 #scroll-text {
+  white-space: nowrap;
   /* animation properties */
   transform: translateX(100%);
   -webkit-animation: my-animation 15s linear infinite;
