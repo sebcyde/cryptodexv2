@@ -21,7 +21,7 @@ function Search() {
 			.then((response) => {
 				console.log('Data Request Sent');
 
-				// throw new Error();
+				throw new Error();
 
 				if (response.data[0].price_change_percentage_24h < 0) {
 					let TickerChange = Red;
