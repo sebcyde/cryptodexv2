@@ -16,8 +16,9 @@
   /* The typewriter cursor effect */
 }
 .Search .SearchForm {
-  margin-bottom: 1em;
   color: #3ffc00;
+  margin-top: 1em;
+  margin-bottom: 2.2em;
 }
 .Search .SearchForm .SearchInput {
   background-color: transparent;
@@ -49,9 +50,10 @@
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
+  margin-bottom: 2em;
 }
 .Search .ReturnedData .TickerImageAndName {
-  width: 40% !important;
+  width: 45% !important;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -67,7 +69,7 @@
   height: 60px;
 }
 .Search .ReturnedData .TickerStats {
-  width: 60% !important;
+  width: 55% !important;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -85,6 +87,7 @@
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
 }
 .Search .typewriter h1 {
   overflow: hidden;

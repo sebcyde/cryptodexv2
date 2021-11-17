@@ -2,7 +2,6 @@
 
 .Twitter {
 	width: 100%;
-
 	margin-left: auto;
 	margin-right: auto;
 
@@ -11,17 +10,19 @@
 		color: $GreenAccentFont;
 
 		.TwitterInput {
-			background-color: transparent;
+			background-color: $GreenBackgroundColor;
 			margin-left: 1em;
 			border-radius: 5px;
 			border: 1px solid $GreenAccentFont;
 			padding: 0.5em;
 			box-shadow: 2px 2px 1px $GreenAccentFont;
 			color: $GreenAccentFont;
+			margin-top: 1em;
+			margin-bottom: 1em;
 		}
 
 		.TwitterSubmit {
-			background-color: transparent;
+			background-color: $GreenBackgroundColor;
 			border-radius: 5px;
 			margin-left: 0.5em;
 			color: $GreenAccentFont;

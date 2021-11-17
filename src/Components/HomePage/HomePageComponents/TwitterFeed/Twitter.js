@@ -35,7 +35,7 @@ function Twitter() {
 				<input
 					type="text"
 					className="TwitterInput"
-					placeholder="Search Tweets"
+					placeholder="Search Profiles"
 					ref={SearchTerm}
 				/>
 				<input type="submit" className="TwitterSubmit" onClick={SearchTweets} />

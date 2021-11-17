@@ -19,9 +19,9 @@ function Search() {
 				`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${SearchTerm.current.value}&order=market_cap_desc&per_page=10&page=1&sparkline=false`
 			)
 			.then((response) => {
-				console.log(response.data);
+				console.log('Data Request Sent');
 
-				console.log(response.data[0].price_change_percentage_24h);
+				// throw new Error();
 
 				if (response.data[0].price_change_percentage_24h < 0) {
 					let TickerChange = Red;
@@ -49,7 +49,7 @@ function Search() {
 								</span>
 							</div>
 						);
-					}, 4000);
+					}, 3500);
 				} else {
 					let TickerChange = Green;
 
@@ -76,8 +76,16 @@ function Search() {
 								</span>
 							</div>
 						);
-					}, 4000);
+					}, 3500);
 				}
+			})
+			.catch((error) => {
+				console.log(error);
+				setSearchReturn(
+					<div className="typewriter">
+						<h1>Request Failure</h1>
+					</div>
+				);
 			});
 
 		axios.get(

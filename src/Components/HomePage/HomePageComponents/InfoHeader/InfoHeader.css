@@ -11,13 +11,12 @@
   background-color: black;
   height: 5vh;
   line-height: 5vh;
-  padding-top: auto;
-  padding-bottom: auto;
+  padding: 0%;
 }
 
 #scroll-text {
   white-space: nowrap;
-  font-size: 25px;
+  font-size: 22px;
   /* animation properties */
   transform: translateX(100%);
   -webkit-animation: my-animation 15s linear infinite;
