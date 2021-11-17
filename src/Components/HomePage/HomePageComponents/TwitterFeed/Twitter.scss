@@ -1,8 +1,36 @@
+@import '../../../../Variables.scss';
+
 .Twitter {
 	width: 100%;
 
 	margin-left: auto;
 	margin-right: auto;
+
+	.TwitterForm {
+		margin-bottom: 1em;
+		color: $GreenAccentFont;
+
+		.TwitterInput {
+			background-color: transparent;
+			margin-left: 1em;
+			border-radius: 5px;
+			border: 1px solid $GreenAccentFont;
+			padding: 0.5em;
+			box-shadow: 2px 2px 1px $GreenAccentFont;
+			color: $GreenAccentFont;
+		}
+
+		.TwitterSubmit {
+			background-color: transparent;
+			border-radius: 5px;
+			margin-left: 0.5em;
+			color: $GreenAccentFont;
+			padding: 0.5em;
+			border: 1px solid $GreenAccentFont;
+			box-shadow: 2px 2px 1px $GreenAccentFont;
+			cursor: pointer;
+		}
+	}
 }
 .timeline-Widget {
 	width: 100%;

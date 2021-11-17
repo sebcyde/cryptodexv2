@@ -9,6 +9,9 @@ function Search() {
 	const [SearchReturn, setSearchReturn] = useState();
 	const SearchTerm = useRef('');
 
+	const Red = 'RedTickerChange';
+	const Green = 'GreenTickerChange';
+
 	const Search = (event) => {
 		event.preventDefault();
 		axios
@@ -18,57 +21,68 @@ function Search() {
 			.then((response) => {
 				console.log(response.data);
 
-				setSearchReturn(
-					<div>
-						<span className="TickerImageAndName">
-							<h2 className="TickerName">{response.data[0].name}</h2>
-							<img src={response.data[0].image} className="TickerImage" />
-						</span>
-						<span className="TickerStats">
-							<h3 className="TickerPrice">
-								Price: ${response.data[0].current_price}
-							</h3>
-							<h3 className="TickerChange">
-								24 Hour Change: {response.data[0].price_change_percentage_24h}%
-							</h3>
-						</span>
-					</div>
-				);
+				console.log(response.data[0].price_change_percentage_24h);
+
+				if (response.data[0].price_change_percentage_24h < 0) {
+					let TickerChange = Red;
+
+					setSearchReturn(
+						<div className="typewriter">
+							<h1>Fetching Data...</h1>
+						</div>
+					);
+					setTimeout(() => {
+						setSearchReturn(
+							<div className="ReturnedData">
+								<span className="TickerImageAndName">
+									<img src={response.data[0].image} className="TickerImage" />
+									<h2 className="TickerName">{response.data[0].name}</h2>
+								</span>
+								<span className="TickerStats">
+									<h3 className="TickerPrice">
+										Current Price: ${response.data[0].current_price}
+									</h3>
+									<h3 className={TickerChange}>
+										24 Hour Change:
+										{response.data[0].price_change_percentage_24h.toFixed(2)}%
+									</h3>
+								</span>
+							</div>
+						);
+					}, 4000);
+				} else {
+					let TickerChange = Green;
+
+					setSearchReturn(
+						<div className="typewriter">
+							<h1>Fetching Data...</h1>
+						</div>
+					);
+					setTimeout(() => {
+						setSearchReturn(
+							<div className="ReturnedData">
+								<span className="TickerImageAndName">
+									<img src={response.data[0].image} className="TickerImage" />
+									<h2 className="TickerName">{response.data[0].name}</h2>
+								</span>
+								<span className="TickerStats">
+									<h3 className="TickerPrice">
+										Current Price: ${response.data[0].current_price}
+									</h3>
+									<h3 className={TickerChange}>
+										24 Hour Change:
+										{response.data[0].price_change_percentage_24h.toFixed(2)}%
+									</h3>
+								</span>
+							</div>
+						);
+					}, 4000);
+				}
 			});
 
 		axios.get(
 			`https://api.coingecko.com/api/v3/coins/${SearchTerm.current.value}/market_chart?vs_currency=usd&days=30`
 		);
-		// .then((response) => {
-		// 	console.log(response.data);
-		// 	console.log(response.data.prices);
-
-		// 	const config = {
-		// 		type: 'line',
-		// 		// data: response.data.prices,
-		// 		series: [
-		// 			{
-		// 				points: [
-		// 					{ x: 'A', y: 50 },
-		// 					{ x: 'B', y: 30 },
-		// 					{ x: 'C', y: 50 },
-		// 				],
-		// 			},
-		// 		],
-		// 	};
-
-		// 	const divStyle = {
-		// 		maxWidth: '700px',
-		// 		height: '400px',
-		// 		margin: '0px auto',
-		// 	};
-
-		// 	setSearchChart(
-		// 		<div style={divStyle}>
-		// 			<JSCharting options={config} />
-		// 		</div>
-		// 	);
-		// });
 
 		SearchTerm.current.value = '';
 	};
@@ -90,9 +104,10 @@ function Search() {
 				/>
 			</form>
 			{SearchReturn}
+			{/* 
 			<div className="ChartContainer" id="chartDiv">
 				{SearchChart}
-			</div>
+			</div> */}
 
 			<div className="SearchResponseContainer">
 				<div className="TickerNews">

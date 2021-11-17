@@ -3,6 +3,29 @@
   margin-left: auto;
   margin-right: auto;
 }
+.Twitter .TwitterForm {
+  margin-bottom: 1em;
+  color: #3ffc00;
+}
+.Twitter .TwitterForm .TwitterInput {
+  background-color: transparent;
+  margin-left: 1em;
+  border-radius: 5px;
+  border: 1px solid #3ffc00;
+  padding: 0.5em;
+  box-shadow: 2px 2px 1px #3ffc00;
+  color: #3ffc00;
+}
+.Twitter .TwitterForm .TwitterSubmit {
+  background-color: transparent;
+  border-radius: 5px;
+  margin-left: 0.5em;
+  color: #3ffc00;
+  padding: 0.5em;
+  border: 1px solid #3ffc00;
+  box-shadow: 2px 2px 1px #3ffc00;
+  cursor: pointer;
+}
 
 .timeline-Widget {
   width: 100%;
