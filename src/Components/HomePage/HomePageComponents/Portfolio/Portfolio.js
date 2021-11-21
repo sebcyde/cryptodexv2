@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './Portfolio.css';
 import LoadingSymbol from '../../../LoadingSymbol/LoadingSymbol.js';
 import axios from 'axios';
+import ATP from '../Search/ATP/ATP';
 
 function Portfolio() {
 	const [PortfolioList, setPortfolioList] = useState(LoadingSymbol);
 	const [Price, setPrice] = useState(LoadingSymbol);
 	// const [GetPrices, setGetPrices] = useState(Prices);
-
 	const Port = [];
 	const PortAPIQuery = [];
 
@@ -16,89 +16,69 @@ function Portfolio() {
 	}
 
 	useEffect(() => {
-		axios
-			.get('https://api.coingecko.com/api/v3/coins/list')
-			.then((response) => {
-				response.data.map((Coin) => {
-					if (Port.length < 7 && Coin.id.length < 7) {
-						Port.push(Coin);
-					}
-				});
-			})
-			.then(() => {
-				console.log(Port);
+		// Port.map((PortfolioItems, index) => {
+		// 	console.log(PortfolioItems);
+		// 	axios
+		// 		.get(
+		// 			`https://api.coingecko.com/api/v3/simple/price?ids=${PortfolioItems.id}&vs_currencies=usd&include_24hr_change=true`
+		// 		)
+		// 		.then((response) => {
+		// 			console.log(response.data);
+		// 			PortAPIQuery.push(response.data);
+		// 		});
+		// 	let Name = capitalizeFirstLetter(PortfolioItems.id);
+		// 	console.log(index);
+		// 	console.log(PortAPIQuery);
+		// 	return (
+		// 		<div key={index} className="ReturnedPortListNames">
+		// 			<span>
+		// 				<LoadingSymbol />
+		// 				<h2 className="AssetName">{Name}</h2>
+		// 			</span>
+		// 			<span>
+		// 				<p className="AssetPrice">${index}</p>
+		// 				<p className="AssetVolume">{index} Vol.</p>
+		// 			</span>
+		// 		</div>
+		// 	);
+		// });
+		console.log(Port);
+		Port.push('bitcoin', 'ethereum', 'shitcoin', 'ocean', 'rsr');
+		console.log(Port);
+	}, []);
 
-				setPortfolioList(
-					Port.map((PortfolioItems, index) => {
-						console.log(PortfolioItems);
-						axios
-							.get(
-								`https://api.coingecko.com/api/v3/simple/price?ids=${PortfolioItems.id}&vs_currencies=usd&include_24hr_change=true`
-							)
-							.then((response) => {
-								console.log(response.data);
-								PortAPIQuery.push(response.data);
-							});
-						let Name = capitalizeFirstLetter(PortfolioItems.id);
-
-						console.log(index);
-						console.log(PortAPIQuery);
-						return (
-							<div key={index} className="ReturnedPortListNames">
-								<span>
-									<LoadingSymbol />
-									<h2 className="AssetName">{Name}</h2>
-								</span>
-
-								<span>
-									<p className="AssetPrice">${index}</p>
-									<p className="AssetVolume">{index} Vol.</p>
-								</span>
-							</div>
-						);
-					})
-				);
-			});
+	useEffect(() => {
 		setInterval(() => {
-			axios
-				.get('https://api.coingecko.com/api/v3/coins/list')
-				.then((response) => {
-					response.data.map((Coin) => {
-						if (Port.length < 7 && Coin.id.length < 7) {
-							Port.push(Coin);
-						}
-					});
-				})
-				.then(() => {
-					setPortfolioList(
-						Port.map((PortfolioItems, index) => {
-							axios
-								.get(
-									`https://api.coingecko.com/api/v3/simple/price?ids=${PortfolioItems.id}&vs_currencies=usd&include_24hr_change=true`
-								)
-								.then((response) => {
-									PortAPIQuery.push(response.data);
-								});
-							let Name = capitalizeFirstLetter(PortfolioItems.id);
+			setPortfolioList(
+				Port.map((PortfolioItems, index) => {
+					axios
+						.get(
+							`https://api.coingecko.com/api/v3/simple/price?ids=${PortfolioItems}&vs_currencies=usd&include_24hr_change=true`
+						)
+						.then((response) => {
+							PortAPIQuery.push(response.data);
+							console.log(PortAPIQuery);
+						});
+					let Name = capitalizeFirstLetter(PortfolioItems);
 
-							return (
-								<div key={index} className="ReturnedPortListNames">
-									<span>
-										<LoadingSymbol />
-										<h2 className="AssetName">{Name}</h2>
-									</span>
+					return (
+						<div key={index} className="ReturnedPortListNames">
+							<span>
+								<LoadingSymbol />
+								<h2 className="AssetName">{Name}</h2>
+							</span>
 
-									<span>
-										<p className="AssetPrice">${index}</p>
-										<p className="AssetVolume">{index} Vol.</p>
-									</span>
-								</div>
-							);
-						})
+							<span>
+								<p className="AssetPrice">${index}</p>
+								<p className="AssetVolume">{index} Vol.</p>
+							</span>
+						</div>
 					);
-				});
+				})
+			);
+
 			console.log('Portfolio Updated');
-		}, 62000);
+		}, 5000);
 	}, []);
 
 	return <div>{PortfolioList}</div>;

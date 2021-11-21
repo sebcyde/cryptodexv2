@@ -6,6 +6,7 @@
 }
 
 .Search {
+  font-family: "Genos", sans-serif;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -28,6 +29,8 @@
   padding: 0.5em;
   box-shadow: 2px 2px 1px #3ffc00;
   color: #3ffc00;
+  font-family: "Genos", sans-serif;
+  font-size: 15px;
 }
 .Search .SearchForm .SearchSubmitButton {
   background-color: transparent;
@@ -38,8 +41,12 @@
   border: 1px solid #3ffc00;
   box-shadow: 2px 2px 1px #3ffc00;
   cursor: pointer;
+  font-family: "Genos", sans-serif;
+  font-size: 15px;
 }
 .Search .SearchForm .SearchSubmitButton:hover {
+  font-family: "Genos", sans-serif;
+  font-size: 15px;
   color: tomato;
   border: 1px solid tomato;
   box-shadow: 2px 2px 1px tomato;
@@ -69,6 +76,7 @@
 }
 .Search .ReturnedData .AddToPortContainer {
   width: 100%;
+  font-family: "Genos", sans-serif;
 }
 .Search .ReturnedData .AddToPortContainer .AddToPort {
   width: 50%;
@@ -83,11 +91,14 @@
   border: 1px solid #3ffc00;
   box-shadow: 2px 2px 1px #3ffc00;
   cursor: pointer;
+  font-family: "Genos", sans-serif;
+  font-size: 17px;
 }
 .Search .ReturnedData .AddToPortContainer .AddToPort:hover {
   color: tomato;
   border: 1px solid tomato;
   box-shadow: 2px 2px 1px tomato;
+  font-family: "Genos", sans-serif;
 }
 .Search .ReturnedData .TickerImageAndName {
   width: 45% !important;

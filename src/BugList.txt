@@ -2,3 +2,4 @@
 2- twitter Search profile switcher doesnt work
 3- scrolling text wont return data
 4- multiple searches sometimes take forever
+5- 'Portfolio Update' time not accurate

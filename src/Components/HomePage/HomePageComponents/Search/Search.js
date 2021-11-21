@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { JSCharting } from 'jscharting-react';
 import ChartBuilder from './ChartBuilder/ChartBuilder.js';
-import PortAPIQuery from '../Portfolio/Portfolio.js';
+import ATP from '../Portfolio/Portfolio.js';
 
 function Search() {
 	const [SearchChart, setSearchChart] = useState(ChartBuilder);
@@ -23,6 +23,7 @@ function Search() {
 			.then((response) => {
 				console.log('Data Request Sent');
 
+				let ValueToAdd = response.data;
 				// throw new Error();
 
 				if (response.data[0].price_change_percentage_24h < 0) {
@@ -51,7 +52,9 @@ function Search() {
 									</h3>
 								</span>
 								<span className="AddToPortContainer">
-									<button className="AddToPort">Add to Portfolio</button>
+									<button className="AddToPort" onClick={ATP}>
+										Add to Portfolio
+									</button>
 								</span>
 							</div>
 						);
@@ -84,7 +87,9 @@ function Search() {
 								</div>
 
 								<span className="AddToPortContainer">
-									<button className="AddToPort">Add to Portfolio</button>
+									<button className="AddToPort" onClick={ATP}>
+										Add to Portfolio
+									</button>
 								</span>
 							</div>
 						);

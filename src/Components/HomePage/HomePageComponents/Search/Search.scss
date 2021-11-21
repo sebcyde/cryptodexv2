@@ -8,6 +8,7 @@
 }
 
 .Search {
+	font-family: 'Genos', sans-serif;
 	height: fit-content;
 	padding: 1em;
 	min-height: 40vh;
@@ -26,6 +27,8 @@
 			padding: 0.5em;
 			box-shadow: 2px 2px 1px $GreenAccentFont;
 			color: $GreenAccentFont;
+			font-family: 'Genos', sans-serif;
+			font-size: 15px;
 		}
 
 		.SearchSubmitButton {
@@ -37,8 +40,12 @@
 			border: 1px solid $GreenAccentFont;
 			box-shadow: $BoxShadow;
 			cursor: pointer;
+			font-family: 'Genos', sans-serif;
+			font-size: 15px;
 		}
 		.SearchSubmitButton:hover {
+			font-family: 'Genos', sans-serif;
+			font-size: 15px;
 			color: tomato;
 			border: $BorderHover;
 			box-shadow: $BoxShadowHover;
@@ -71,6 +78,7 @@
 
 		.AddToPortContainer {
 			width: 100%;
+			font-family: 'Genos', sans-serif;
 
 			.AddToPort {
 				width: 50%;
@@ -85,12 +93,15 @@
 				border: 1px solid $GreenAccentFont;
 				box-shadow: $BoxShadow;
 				cursor: pointer;
+				font-family: 'Genos', sans-serif;
+				font-size: 17px;
 			}
 
 			.AddToPort:hover {
 				color: tomato;
 				border: $BorderHover;
 				box-shadow: $BoxShadowHover;
+				font-family: 'Genos', sans-serif;
 			}
 		}
 
