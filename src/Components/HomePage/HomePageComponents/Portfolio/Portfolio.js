@@ -3,7 +3,6 @@ import './Portfolio.css';
 import LoadingSymbol from '../../../LoadingSymbol/LoadingSymbol.js';
 import axios from 'axios';
 
-
 function Portfolio() {
 	const [PortfolioList, setPortfolioList] = useState(LoadingSymbol);
 	const [Price, setPrice] = useState(LoadingSymbol);

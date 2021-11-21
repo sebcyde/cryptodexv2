@@ -35,8 +35,13 @@
 			color: $GreenAccentFont;
 			padding: 0.5em;
 			border: 1px solid $GreenAccentFont;
-			box-shadow: 2px 2px 1px $GreenAccentFont;
+			box-shadow: $BoxShadow;
 			cursor: pointer;
+		}
+		.SearchSubmitButton:hover {
+			color: tomato;
+			border: $BorderHover;
+			box-shadow: $BoxShadowHover;
 		}
 	}
 
@@ -47,11 +52,47 @@
 		margin-left: auto;
 		margin-right: auto;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-evenly;
 		align-content: center;
 		align-items: center;
 		margin-bottom: 2em;
+
+		.ReturnedStats {
+			width: 100%;
+			height: 90%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-content: center;
+			align-items: center;
+			margin-bottom: 1em;
+		}
+
+		.AddToPortContainer {
+			width: 100%;
+
+			.AddToPort {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 1.5em;
+				background-color: transparent;
+				border-radius: 5px;
+				margin-left: 0.5em;
+				color: $GreenAccentFont;
+				padding: 0.5em;
+				border: 1px solid $GreenAccentFont;
+				box-shadow: $BoxShadow;
+				cursor: pointer;
+			}
+
+			.AddToPort:hover {
+				color: tomato;
+				border: $BorderHover;
+				box-shadow: $BoxShadowHover;
+			}
+		}
 
 		.TickerImageAndName {
 			width: 45% !important;
