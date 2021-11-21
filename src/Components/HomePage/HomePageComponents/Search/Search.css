@@ -101,8 +101,8 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-animation: typing 2.5s steps(20, end), blink-caret 1s step-end infinite;
-          animation: typing 2.5s steps(20, end), blink-caret 1s step-end infinite;
+  -webkit-animation: typing 2s steps(20, end), blink-caret 1s step-end infinite;
+          animation: typing 2s steps(20, end), blink-caret 1s step-end infinite;
 }
 @-webkit-keyframes typing {
   from {

@@ -8,6 +8,7 @@ function Search() {
 	const [SearchChart, setSearchChart] = useState(ChartBuilder);
 	const [SearchReturn, setSearchReturn] = useState();
 	const SearchTerm = useRef('');
+	const space = ' ';
 
 	const Red = 'RedTickerChange';
 	const Green = 'GreenTickerChange';
@@ -21,7 +22,7 @@ function Search() {
 			.then((response) => {
 				console.log('Data Request Sent');
 
-				throw new Error();
+				// throw new Error();
 
 				if (response.data[0].price_change_percentage_24h < 0) {
 					let TickerChange = Red;
@@ -44,6 +45,7 @@ function Search() {
 									</h3>
 									<h3 className={TickerChange}>
 										24 Hour Change:
+										{space}
 										{response.data[0].price_change_percentage_24h.toFixed(2)}%
 									</h3>
 								</span>
