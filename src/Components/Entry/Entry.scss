@@ -5,13 +5,28 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-content: center;
 	justify-content: center;
-	img{
-		height: 150px;
-		width: auto;
+	z-index: 10;
+
+	.row .col.s12 {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
-	.EntryTitle {
-		color: $AccentFont;
+
+	.progress {
+		margin-left: auto;
+		margin-right: auto;
+		height: 10px;
+		width: 40%;
+		background-color: $GreenBackgroundColor;
+		border-radius: 2px;
+
+		overflow: hidden;
+
+		.determinate {
+			background-color: $GreenAccentFont;
+		}
 	}
 }

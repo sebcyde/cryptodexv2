@@ -3,13 +3,24 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
   justify-content: center;
+  z-index: 10;
 }
-.Entry img {
-  height: 150px;
-  width: auto;
+.Entry .row .col.s12 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.Entry .EntryTitle {
-  color: #3fc0e8;
+.Entry .progress {
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  width: 40%;
+  background-color: rgba(0, 95, 0, 0.364);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.Entry .progress .determinate {
+  background-color: #3ffc00;
 }/*# sourceMappingURL=Entry.css.map */
