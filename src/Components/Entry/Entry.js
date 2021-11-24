@@ -4,24 +4,17 @@ import 'materialize-css';
 import { Row, Col, ProgressBar } from 'react-materialize';
 
 function Entry() {
-	let x = 0;
+	let current_progress = 0;
+	let interval = setInterval(function () {
+		current_progress += 30;
 
-	setTimeout(() => {
-		let x = 24;
+		if (current_progress >= 100) clearInterval(interval);
 	}, 1000);
-
-	setTimeout(() => {
-		let x = 80;
-	}, 2200);
-
-	setTimeout(() => {
-		let x = 100;
-	}, 3000);
 
 	return (
 		<Row className="Entry">
 			<Col s={12}>
-				<ProgressBar progress={x} />
+				<ProgressBar progress={70} />
 			</Col>
 		</Row>
 	);
