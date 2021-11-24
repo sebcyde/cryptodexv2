@@ -10,9 +10,11 @@
     "axios": "^0.24.0",
     "install": "^0.13.0",
     "jscharting": "^3.1.0",
+    "materialize-css": "^1.0.0-rc.2",
     "npm": "^8.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-materialize": "^3.10.0",
     "react-scripts": "4.0.3",
     "react-twitter-embed": "^3.0.3",
     "web-vitals": "^1.1.2"
