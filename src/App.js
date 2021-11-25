@@ -6,9 +6,9 @@ import HomePage from './Components/HomePage/HomePage.js';
 function App() {
 	const [Splash, setSplash] = useState(<Entry />);
 
-	// setTimeout(() => {
-	// 	setSplash(<HomePage />);
-	// }, 3000);
+	setTimeout(() => {
+		setSplash(<HomePage />);
+	}, 3500);
 
 	return <div className="App">{Splash}</div>;
 }

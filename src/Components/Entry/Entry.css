@@ -21,6 +21,6 @@
   border-radius: 2px;
   overflow: hidden;
 }
-.Entry .progress .determinate {
+.Entry .progress .indeterminate {
   background-color: #3ffc00;
 }/*# sourceMappingURL=Entry.css.map */
