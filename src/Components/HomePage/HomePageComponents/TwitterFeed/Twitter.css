@@ -2,13 +2,21 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Genos", sans-serif;
 }
 .Twitter .TwitterForm {
   margin-bottom: 1em;
   color: #3ffc00;
 }
 .Twitter .TwitterForm .TwitterInput {
+  font-family: "Genos", sans-serif;
   background-color: rgba(0, 95, 0, 0.364);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-left: 1em;
   border-radius: 5px;
   border: 1px solid #3ffc00;

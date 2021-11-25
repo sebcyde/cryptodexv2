@@ -9,8 +9,8 @@
 
 .Search {
 	font-family: 'Genos', sans-serif;
-	height: fit-content;
-	padding: 1em;
+	height: fit-content !important;
+	padding: 1em !important;
 	min-height: 40vh;
 	color: $GreenAccentFont;
 
@@ -21,14 +21,16 @@
 
 		.SearchInput {
 			background-color: transparent;
+			height: fit-content;
+			width: 30%;
 			margin-left: 1em;
 			border-radius: 5px;
 			border: 1px solid $GreenAccentFont;
-			padding: 0.5em;
+			padding: 0.5em !important;
 			box-shadow: 2px 2px 1px $GreenAccentFont;
 			color: $GreenAccentFont;
 			font-family: 'Genos', sans-serif;
-			font-size: 15px;
+			font-size: 15px !important;
 		}
 
 		.SearchSubmitButton {

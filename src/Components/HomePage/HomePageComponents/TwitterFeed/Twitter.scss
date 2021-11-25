@@ -4,13 +4,17 @@
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	font-family: 'Genos', sans-serif;
 
 	.TwitterForm {
 		margin-bottom: 1em;
 		color: $GreenAccentFont;
 
 		.TwitterInput {
+			font-family: 'Genos', sans-serif;
 			background-color: $GreenBackgroundColor;
+			height: fit-content;
+			width: fit-content;
 			margin-left: 1em;
 			border-radius: 5px;
 			border: 1px solid $GreenAccentFont;
