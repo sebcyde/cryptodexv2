@@ -35,45 +35,10 @@ function Search() {
 						</div>
 					);
 					setTimeout(() => {
-						setSearchReturn(
-							<div className="ReturnedData">
-								<span className="ReturnedDataContainer">
-									<span className="TickerImageAndName">
-										<img src={response.data[0].image} className="TickerImage" />
-										<h2 className="TickerName">{response.data[0].name}</h2>
-									</span>
-									<span className="TickerStats">
-										<h3 className="TickerPrice">
-											Current Price: ${response.data[0].current_price}
-										</h3>
-										<h3 className={TickerChange}>
-											24 Hour Change:
-											{space}
-											{response.data[0].price_change_percentage_24h.toFixed(2)}%
-										</h3>
-									</span>
-								</span>
-								<span className="AddToPortContainer">
-									<button className="AddToPort" onClick={ATP}>
-										Add to Portfolio
-									</button>
-								</span>
-							</div>
-						);
-					}, 3500);
-				} else {
-					let TickerChange = Green;
-
-					setSearchReturn(
-						<div className="typewriter">
-							<h1>Fetching Data...</h1>
-						</div>
-					);
-					setTimeout(() => {
-						setSearchReturn(
-							<div className="ReturnedData">
-								<span className="ReturnedDataContainer">
-									<div className="ReturnedStats">
+						try {
+							setSearchReturn(
+								<div className="ReturnedData">
+									<span className="ReturnedDataContainer">
 										<span className="TickerImageAndName">
 											<img
 												src={response.data[0].image}
@@ -87,21 +52,80 @@ function Search() {
 											</h3>
 											<h3 className={TickerChange}>
 												24 Hour Change:
+												{space}
 												{response.data[0].price_change_percentage_24h.toFixed(
 													2
 												)}
 												%
 											</h3>
 										</span>
-									</div>
-								</span>
-								<span className="AddToPortContainer">
-									<button className="AddToPort" onClick={ATP}>
-										Add to Portfolio
-									</button>
-								</span>
-							</div>
-						);
+									</span>
+									<span className="AddToPortContainer">
+										<button className="AddToPort" onClick={ATP}>
+											Add to Portfolio
+										</button>
+									</span>
+								</div>
+							);
+						} catch (error) {
+							console.log(error);
+							setSearchReturn(
+								<div className="typewriter">
+									<h1>Request Failure</h1>
+								</div>
+							);
+						}
+					}, 3500);
+				} else {
+					let TickerChange = Green;
+
+					setSearchReturn(
+						<div className="typewriter">
+							<h1>Fetching Data...</h1>
+						</div>
+					);
+					setTimeout(() => {
+						try {
+							setSearchReturn(
+								<div className="ReturnedData">
+									<span className="ReturnedDataContainer">
+										<div className="ReturnedStats">
+											<span className="TickerImageAndName">
+												<img
+													src={response.data[0].image}
+													className="TickerImage"
+												/>
+												<h2 className="TickerName">{response.data[0].name}</h2>
+											</span>
+											<span className="TickerStats">
+												<h3 className="TickerPrice">
+													Current Price: ${response.data[0].current_price}
+												</h3>
+												<h3 className={TickerChange}>
+													24 Hour Change:
+													{response.data[0].price_change_percentage_24h.toFixed(
+														2
+													)}
+													%
+												</h3>
+											</span>
+										</div>
+									</span>
+									<span className="AddToPortContainer">
+										<button className="AddToPort" onClick={ATP}>
+											Add to Portfolio
+										</button>
+									</span>
+								</div>
+							);
+						} catch (error) {
+							console.log(error);
+							setSearchReturn(
+								<div className="typewriter">
+									<h1>Request Failure</h1>
+								</div>
+							);
+						}
 					}, 3500);
 				}
 			})

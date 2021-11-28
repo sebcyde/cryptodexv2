@@ -73,19 +73,26 @@
 		}
 	}
 
-	.HomePageMiddleSection {
-		border: $Border;
-		margin-top: 1em;
-		border-radius: 15px;
+	.Mid {
+		display: flex;
+		flex-direction: column;
 		width: 50%;
-		height: fit-content;
-		box-shadow: 2px 2px 3px green;
-		overflow-y: auto;
-		background-color: $GreenBackgroundColor;
-		p {
-			width: 90%;
-			margin-left: auto;
-			margin-right: auto;
+
+		.HomePageMiddleSection {
+			border: $Border;
+			margin-top: 1em;
+			border-radius: 15px;
+			width: 100%;
+			height: fit-content;
+			box-shadow: 2px 2px 3px green;
+			// overflow-y: auto;
+			background-color: $GreenBackgroundColor;
+			margin-bottom: 1em;
+			p {
+				width: 90%;
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 	}
 

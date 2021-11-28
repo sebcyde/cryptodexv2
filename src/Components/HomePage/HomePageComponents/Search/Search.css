@@ -11,8 +11,8 @@
   height: -moz-fit-content !important;
   height: fit-content !important;
   padding: 1em !important;
-  min-height: 40vh;
   color: #3ffc00;
+  margin-bottom: 2em;
   /* The typing effect */
   /* The typewriter cursor effect */
 }

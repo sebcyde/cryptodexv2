@@ -22,8 +22,6 @@ function HomePage() {
 			d.getMinutes()
 	);
 
-	const [MiddleHome, setMiddleHome] = useState(<Search />);
-
 	// const EditPortfolio = () => {
 	// 	setMiddleHome();
 	// };
@@ -69,9 +67,14 @@ function HomePage() {
 				<Portfolio />
 			</div>
 
-			<div className="HomePageMiddleSection">
-				{MiddleHome}
-				<News />
+			<div className="Mid">
+				<div className="HomePageMiddleSection">
+					<Search />
+				</div>
+
+				<div className="HomePageMiddleSection">
+					<News />
+				</div>
 			</div>
 
 			<div className="TwitterListContainer">
