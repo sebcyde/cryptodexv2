@@ -15,8 +15,8 @@
 .Entry .progress {
   margin-left: auto;
   margin-right: auto;
-  height: 10px;
-  width: 40%;
+  height: 0.5em;
+  width: 35%;
   background-color: rgba(0, 95, 0, 0.364);
   border-radius: 2px;
   overflow: hidden;

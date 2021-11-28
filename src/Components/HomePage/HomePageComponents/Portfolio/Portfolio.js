@@ -11,10 +11,12 @@ function Portfolio() {
 	const Port = [];
 	let PortAPIQuery = [];
 
+	// Function to capitalise first letter of items displayed in portfolio
 	function capitalizeFirstLetter(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
+	// Example placeholder portfolio items
 	useEffect(() => {
 		Port.push('bitcoin', 'ethereum', 'shitcoin', 'ocean');
 	}, []);

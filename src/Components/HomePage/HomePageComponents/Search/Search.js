@@ -37,19 +37,21 @@ function Search() {
 					setTimeout(() => {
 						setSearchReturn(
 							<div className="ReturnedData">
-								<span className="TickerImageAndName">
-									<img src={response.data[0].image} className="TickerImage" />
-									<h2 className="TickerName">{response.data[0].name}</h2>
-								</span>
-								<span className="TickerStats">
-									<h3 className="TickerPrice">
-										Current Price: ${response.data[0].current_price}
-									</h3>
-									<h3 className={TickerChange}>
-										24 Hour Change:
-										{space}
-										{response.data[0].price_change_percentage_24h.toFixed(2)}%
-									</h3>
+								<span className="ReturnedDataContainer">
+									<span className="TickerImageAndName">
+										<img src={response.data[0].image} className="TickerImage" />
+										<h2 className="TickerName">{response.data[0].name}</h2>
+									</span>
+									<span className="TickerStats">
+										<h3 className="TickerPrice">
+											Current Price: ${response.data[0].current_price}
+										</h3>
+										<h3 className={TickerChange}>
+											24 Hour Change:
+											{space}
+											{response.data[0].price_change_percentage_24h.toFixed(2)}%
+										</h3>
+									</span>
 								</span>
 								<span className="AddToPortContainer">
 									<button className="AddToPort" onClick={ATP}>
@@ -70,22 +72,29 @@ function Search() {
 					setTimeout(() => {
 						setSearchReturn(
 							<div className="ReturnedData">
-								<div className="ReturnedStats">
-									<span className="TickerImageAndName">
-										<img src={response.data[0].image} className="TickerImage" />
-										<h2 className="TickerName">{response.data[0].name}</h2>
-									</span>
-									<span className="TickerStats">
-										<h3 className="TickerPrice">
-											Current Price: ${response.data[0].current_price}
-										</h3>
-										<h3 className={TickerChange}>
-											24 Hour Change:
-											{response.data[0].price_change_percentage_24h.toFixed(2)}%
-										</h3>
-									</span>
-								</div>
-
+								<span className="ReturnedDataContainer">
+									<div className="ReturnedStats">
+										<span className="TickerImageAndName">
+											<img
+												src={response.data[0].image}
+												className="TickerImage"
+											/>
+											<h2 className="TickerName">{response.data[0].name}</h2>
+										</span>
+										<span className="TickerStats">
+											<h3 className="TickerPrice">
+												Current Price: ${response.data[0].current_price}
+											</h3>
+											<h3 className={TickerChange}>
+												24 Hour Change:
+												{response.data[0].price_change_percentage_24h.toFixed(
+													2
+												)}
+												%
+											</h3>
+										</span>
+									</div>
+								</span>
 								<span className="AddToPortContainer">
 									<button className="AddToPort" onClick={ATP}>
 										Add to Portfolio
@@ -128,7 +137,9 @@ function Search() {
 					className="SearchSubmitButton"
 				/>
 			</form>
+
 			{SearchReturn}
+
 			{/* 
 			<div className="ChartContainer" id="chartDiv">
 				{SearchChart}
