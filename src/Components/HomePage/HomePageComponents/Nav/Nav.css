@@ -8,14 +8,16 @@
   position: fixed;
   top: 0px;
   padding-bottom: 0.2em;
-  padding-right: 8px;
+  padding-right: 0.2em;
   display: flex;
   flex-direction: row;
   justify-content: end;
 }
 .Nav .NavData {
   height: 100%;
-  width: 8em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border: thick double green;
   border-right: none;
   border-top: none;
@@ -29,4 +31,7 @@
   justify-content: space-between;
   padding-left: 1em;
   padding-right: 1em;
+}
+.Nav .NavData .NavDate {
+  margin-right: 1em;
 }/*# sourceMappingURL=Nav.css.map */

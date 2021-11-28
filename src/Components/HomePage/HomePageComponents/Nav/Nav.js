@@ -32,8 +32,8 @@ function Nav() {
 	return (
 		<div className="Nav">
 			<span className="NavData">
-				<span>{newDate}</span>
-				<span>{newTime}</span>
+				<span className="NavDate">{newDate}</span>
+				<span className="NavTime">{newTime}</span>
 			</span>
 		</div>
 	);
