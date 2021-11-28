@@ -1,18 +1,19 @@
 @import '../../../../Variables.scss';
 
 .Nav {
-	width: 100% !important;
+	width: 5em !important;
 	height: fit-content;
 	color: $GreenAccentFont;
 	border: none;
 	position: fixed;
 	top: 0px;
+	right: 0px;
 	padding-bottom: 0.2em;
 	padding-right: 0.2em;
 	display: flex;
 	flex-direction: row;
 	justify-content: end;
-
+	margin-right: 5px;
 	.NavData {
 		height: 100%;
 		width: fit-content;

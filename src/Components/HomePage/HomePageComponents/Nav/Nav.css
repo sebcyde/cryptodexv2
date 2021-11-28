@@ -1,5 +1,5 @@
 .Nav {
-  width: 100% !important;
+  width: 5em !important;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -7,11 +7,13 @@
   border: none;
   position: fixed;
   top: 0px;
+  right: 0px;
   padding-bottom: 0.2em;
   padding-right: 0.2em;
   display: flex;
   flex-direction: row;
   justify-content: end;
+  margin-right: 5px;
 }
 .Nav .NavData {
   height: 100%;

@@ -8,40 +8,40 @@ function InfoHeader() {
 	const [FinalHeader, setFinalHeader] = useState(<span></span>);
 	const Test = [];
 
-	useEffect(() => {
-		axios
-			.get('https://api.coingecko.com/api/v3/search/trending')
-			.then((response) => {
-				response.data.coins.map((TrendingCoins) => {
-					axios
-						.get(
-							`https://api.coingecko.com/api/v3/coins/${TrendingCoins.item.id}`
-						)
-						.then((secondresponse) => {
-							console.log(secondresponse.data);
-							Trending.push(secondresponse.data);
-							// Trending.map((Coins) => {
-							// 	TrendingCleanData.push(
-							// 		<span className="TrendingContainer" key={Coins}>
-							// 			<p className="Symbol">{Coins.symbol}:</p>
-							// 			<p className>{Coins.market_data.current_price.usd}</p>
-							// 			<p>
-							// 				{
-							// 					Coins.market_data
-							// 						.price_change_percentage_24h_in_currency.usd
-							// 				}
-							// 				%
-							// 			</p>
-							// 		</span>
-							// 	);
-							// 	return TrendingCleanData;
-							// });
-						});
-				});
-				console.log(Trending);
-				console.log(TrendingCleanData);
-			});
-	}, []);
+	// useEffect(() => {
+	// 	axios
+	// 		.get('https://api.coingecko.com/api/v3/search/trending')
+	// 		.then((response) => {
+	// 			response.data.coins.map((TrendingCoins) => {
+	// 				axios
+	// 					.get(
+	// 						`https://api.coingecko.com/api/v3/coins/${TrendingCoins.item.id}`
+	// 					)
+	// 					.then((secondresponse) => {
+	// 						console.log(secondresponse.data);
+	// 						Trending.push(secondresponse.data);
+	// 						// Trending.map((Coins) => {
+	// 						// 	TrendingCleanData.push(
+	// 						// 		<span className="TrendingContainer" key={Coins}>
+	// 						// 			<p className="Symbol">{Coins.symbol}:</p>
+	// 						// 			<p className>{Coins.market_data.current_price.usd}</p>
+	// 						// 			<p>
+	// 						// 				{
+	// 						// 					Coins.market_data
+	// 						// 						.price_change_percentage_24h_in_currency.usd
+	// 						// 				}
+	// 						// 				%
+	// 						// 			</p>
+	// 						// 		</span>
+	// 						// 	);
+	// 						// 	return TrendingCleanData;
+	// 						// });
+	// 					});
+	// 			});
+	// 			console.log(Trending);
+	// 			console.log(TrendingCleanData);
+	// 		});
+	// }, []);
 
 	return (
 		<div id="scroll-container">

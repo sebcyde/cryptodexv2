@@ -17,7 +17,7 @@ function Twitter() {
 	const SearchTweets = (event) => {
 		event.preventDefault();
 		console.log(`Searching Tweets for ${SearchTerm.current.value}`);
-
+		setTwit('');
 		setTwit(
 			<TwitterTimelineEmbed
 				sourceType="profile"
@@ -27,6 +27,8 @@ function Twitter() {
 				theme="dark"
 			/>
 		);
+
+		// setTwit();
 	};
 
 	return (

@@ -9,6 +9,7 @@ import EditPortfolio from './HomePageComponents/Portfolio/Portfolio.js';
 import InfoHeader from './HomePageComponents/InfoHeader/InfoHeader';
 import PortfolioList from './HomePageComponents/Portfolio/Portfolio.js';
 import Nav from './HomePageComponents/Nav/Nav';
+import News from './HomePageComponents/News/News.js';
 
 function HomePage() {
 	AOS.init();
@@ -57,7 +58,7 @@ function HomePage() {
 					<p className="LastUpdated">{`Last Updated ${PortUpdateTime}`}</p>
 
 					<i
-						classname="material-icons"
+						className="material-icons"
 						ref={EditPortButton}
 						onclick={EditPortfolio}
 					>
@@ -68,7 +69,10 @@ function HomePage() {
 				<Portfolio />
 			</div>
 
-			<div className="HomePageMiddleSection">{MiddleHome}</div>
+			<div className="HomePageMiddleSection">
+				{MiddleHome}
+				<News />
+			</div>
 
 			<div className="TwitterListContainer">
 				<Twitter />
